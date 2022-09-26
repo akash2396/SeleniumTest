@@ -20,8 +20,6 @@ import AutomationTesting.POMClasses.JobApplicationPage;
 import AutomationTesting.POMClasses.LandingPage;
 import AutomationTesting.resources.Base;
 
-
-
 public class TC01Test extends Base
 {
 	public WebDriver driver;
@@ -34,7 +32,7 @@ public class TC01Test extends Base
 	}
 	
 	@Test
-	public void verifyFunality() throws IOException
+	public void verifyFunctionality() throws IOException
 	{
 		
 		String expectedHeaderText = "JOIN OUR CREW";

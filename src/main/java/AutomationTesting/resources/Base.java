@@ -13,6 +13,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeMethod;
 
 import AutomationTesting.POMClasses.LandingPage;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Base 
 {
@@ -29,25 +30,28 @@ public class Base
 		
 		if(browserName.equals("chrome"))
 		{
+			WebDriverManager.chromedriver().setup();
 			
-			System.setProperty("webdriver.chrome.driver", 
-					System.getProperty("user.dir")+"\\drivers\\chromedriver.exe");
+//			System.setProperty("webdriver.chrome.driver", 
+//					System.getProperty("user.dir")+"\\drivers\\chromedriver.exe");
 			driver=new ChromeDriver();
 			
 			
 		}
 		else if(browserName.equals("firefox"))
 		{
+			WebDriverManager.firefoxdriver().setup();
 			
-			System.setProperty("webdriver.gecko.driver", 
-					System.getProperty("user.dir")+"\\drivers\\geckodriver.exe");
+//			System.setProperty("webdriver.gecko.driver", 
+//					System.getProperty("user.dir")+"\\drivers\\geckodriver.exe");
 			driver = new FirefoxDriver();
 		}
 		else if(browserName.equals("edge"))
 		{
+			WebDriverManager.edgedriver().setup();
 			
-			System.setProperty("webdriver.edge.driver", 
-					System.getProperty("user.dir")+"\\drivers\\msedgedriver.exe");
+//			System.setProperty("webdriver.edge.driver", 
+//					System.getProperty("user.dir")+"\\drivers\\msedgedriver.exe");
 			driver = new EdgeDriver();
 		}
 		
