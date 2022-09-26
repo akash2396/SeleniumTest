@@ -5,7 +5,7 @@
     <classes>
       <class name="AutomationTesting.TC01Test">
         <methods>
-          <include name="verifyFunality"/>
+          <include name="verifyFunctionality"/>
           <include name="tearDown"/>
           <include name="initialize"/>
         </methods>
