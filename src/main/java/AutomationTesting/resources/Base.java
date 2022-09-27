@@ -30,29 +30,29 @@ public class Base
 		
 		if(browserName.equals("chrome"))
 		{
-			WebDriverManager.chromedriver().setup();
+			driver=WebDriverManager.chromedriver().create();
 			
 //			System.setProperty("webdriver.chrome.driver", 
 //					System.getProperty("user.dir")+"\\drivers\\chromedriver.exe");
-			driver=new ChromeDriver();
+		//	driver=new ChromeDriver();
 			
 			
 		}
 		else if(browserName.equals("firefox"))
 		{
-			WebDriverManager.firefoxdriver().setup();
+			driver=WebDriverManager.firefoxdriver().create();
 			
 //			System.setProperty("webdriver.gecko.driver", 
 //					System.getProperty("user.dir")+"\\drivers\\geckodriver.exe");
-			driver = new FirefoxDriver();
+//			driver = new FirefoxDriver();
 		}
 		else if(browserName.equals("edge"))
 		{
-			WebDriverManager.edgedriver().setup();
+			driver=WebDriverManager.edgedriver().create();
 			
 //			System.setProperty("webdriver.edge.driver", 
 //					System.getProperty("user.dir")+"\\drivers\\msedgedriver.exe");
-			driver = new EdgeDriver();
+//			driver = new EdgeDriver();
 		}
 		
 		driver.manage().window().maximize();
