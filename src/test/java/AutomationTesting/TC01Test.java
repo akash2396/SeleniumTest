@@ -69,7 +69,6 @@ public class TC01Test extends Base
 		landingPage.sendGraduationPercentage("88");
 		landingPage.clickOnNextButton();
 		
-		
 	}
 	
 	@AfterMethod
